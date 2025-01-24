@@ -1,0 +1,10 @@
+<h1>All Invoices</h1>
+{% for invoice in invoice_list %}
+<ul>
+<li>Invoice Id: {{ invoice.id }}</li>
+
+<li>:Date {{ invoice.date }}</li>
+<li>Author: {{ book.author }}</li>
+<li>ISBN: {{ book.isbn }}</li>
+</ul>
+{% endfor %}
