@@ -10,7 +10,7 @@ class CustomerAdmin(admin.ModelAdmin):
     form=CustomerChangeForm
     model=Customer
     
-    list_display = ('full_name',, 'email','is_staff')  
+    list_display = ('full_name', 'email','is_staff')  
     search_fields = ('full_name', 'email')      
     list_filter = ('full_name',)  
     fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("name",)}),)

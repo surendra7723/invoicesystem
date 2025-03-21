@@ -5,7 +5,7 @@ from .models import Customer
 class CustomerCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = Customer
-        fields = UserCreationForm.Meta.fields + ("name",)
+        fields = UserCreationForm.Meta.fields + ("full_name",)
         
         
 class CustomerChangeForm(UserChangeForm):

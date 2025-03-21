@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'invoice.apps.InvoiceConfig',
-    'apis.apps.ApisConfig',
               
 ]
 

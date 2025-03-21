@@ -2,3 +2,11 @@
 .env
 __pycache__/
 db.sqlite3
+runbackend.sh
+invoice/__pycache__/
+# Ignore __pycache__ directories
+__pycache__/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
