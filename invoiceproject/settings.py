@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'invoice.apps.InvoiceConfig',
+    'rest_framework_simplejwt',
+    
               
 ]
 
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -130,8 +133,10 @@ REST_FRAMEWORK={
         "rest_framework.permissions.IsAuthenticated",
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-    ]
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        ]
     }
 AUTH_USER_MODEL = "invoice.Customer"
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000"
+]
